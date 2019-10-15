@@ -50,10 +50,25 @@ console.log(over7);
 console.log("----------------------------------");
 /* Ara volem fer el mateix, però que ens torne un String amb els dies que ténen més de 7 caracters */
 /* reduce */
-const TeMesDe = (unDia, numCaracMax) => {
+/*const TeMesDe = (unDia, numCaracMax) => {
     return unDia.length > numCaracMax;
 }
-let mayor7= dies.reduce(TeMesDe(unDia, 8));
-console.log(mayor7);
+let mayor7 = dies.reduce(TeMesDe(unDia, 8));
+console.log(mayor7);*/
+let rdo1 = dies.reduce((mayorQue, elemento) => {
+    if (elemento.length > 7) {
+        return mayorQue + elemento + ", ";
+    } else {
+        return mayorQue;
+    }
+}, "");
+console.log(rdo1);
+
+console.log("----------------------------------");
+/*En una linea*/
+let rdo2 = dies.reduce((mayorQue, elemento) => (elemento.length > 7) ? mayorQue + elemento + "," : mayorQue, "");
+console.log(rdo2);
+
+
 
 
