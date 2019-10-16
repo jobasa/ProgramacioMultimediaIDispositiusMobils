@@ -14,12 +14,12 @@ console.log("----------------------------------");
 // És a dir per a l'array ['dilluns', 'dimarts', 'dimecres'] 
 // torne un objecte {dilluns:0, dimarts:1, dimecres:2}
 let dies = ['dilluns', 'dimarts', 'dimecres'];
-let rdo3= dies.reduce((acumular,element,pos)=>{
-    acumular[element]=pos;
+let rdo3 = dies.reduce((acumular, element, pos) => {
+    acumular[element] = pos;
     return acumular;
-},{});
+}, {});
 console.log(rdo3);
-
+console.log("----------------------------------");
 
 //A partir d'un array amb objectes Musics (nom i instrument que toca)
 //Que torne un array amb els noms de tots els components
@@ -32,14 +32,31 @@ let musics = [
     { 'nom': 'Guillem', 'instrument': 'baix' }
 ]
 
+//Ara ho fem amb reduce
+let nomMusics = musics.reduce((acumulandor2, unMusic) => acumulandor2.concat(unMusic.nom), []);
+console.log(nomMusics);
 
+
+console.log("----------------------------------");
 //Ara feu-ho utilitzant map()
+let rdo4 = musics.map((elementMusico) => { return elementMusico.nom });
+console.log(rdo4);
 
+console.log("----------------------------------");
 //Ara que torne un array només amb els noms del musics que toquen la guitarra
 //['Pep', 'Vicent Lloret']
+let rdo5 = musics.filter((instrumento)=>{
+    if (instrumento.instrument==='guitarra') {
+        return instrumento.nom
+    }
+});
+console.log(rdo5);
 
+console.log("----------------------------------");
 //Amb reduce
 //['Pep', 'Vicent Lloret']
+
+console.log("----------------------------------");
 //----------------------------------------------------------------------------------
 
 const users = [
