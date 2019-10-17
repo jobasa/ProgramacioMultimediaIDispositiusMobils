@@ -45,8 +45,8 @@ console.log(rdo4);
 console.log("----------------------------------");
 //Ara que torne un array només amb els noms del musics que toquen la guitarra
 //['Pep', 'Vicent Lloret']
-let rdo5 = musics.filter((instrumento)=>{
-    if (instrumento.instrument==='guitarra') {
+let rdo5 = musics.filter((instrumento) => {
+    if (instrumento.instrument === 'guitarra') {
         return instrumento.nom
     }
 });
@@ -79,6 +79,7 @@ const users = [
         password: "Dean_hashed_password"
     }]
 
+    console.log("----------------------------------");
 //Que torne un array d'objectes amb l'email, el tel i la web
 [
     {
@@ -93,7 +94,7 @@ const users = [
     }
 ]
 
-
+console.log("----------------------------------");
 //-----------------------------------------------------
 //A partir d'un arrar de comandes com el proporcionat
 let comandes = [
@@ -142,6 +143,7 @@ let comandes = [
     }
 ]
 
+
 // tornar un array anomenat llistat de comandes, on cada element siga un array d'objectes on 
 // aparega només el client i el producte de la seua comanda.
 // Exemple:
@@ -161,3 +163,17 @@ let comandes = [
 //         { client: 'Tomas Marin', productes: 'Platans' }
 //     ]
 // ]
+let pedidos=comandes.map((element1)=>{
+    //Agafar el nom del producte y del client de cada array
+    let nom= element1.client;
+    let producte=element1.productes;
+
+    //Maniupule array producte
+    producte.map(({nom})=>{
+        let nomProd=nom;
+        return ({'client':nom, 'productes': nomProd});
+    });
+});
+ console.log(pedidos);
+ 
+console.log("----------------------------------");
