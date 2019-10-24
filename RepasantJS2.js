@@ -167,12 +167,14 @@ let pedidos=comandes.map((element1)=>{
     //Agafar el nom del producte y del client de cada array
     let nom= element1.client;
     let producte=element1.productes;
-
+    
     //Maniupule array producte
     producte.map(({nom})=>{
         let nomProd=nom;
         return ({'client':nom, 'productes': nomProd});
     });
+
+
 });
  console.log(pedidos);
  

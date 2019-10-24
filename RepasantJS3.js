@@ -135,6 +135,7 @@ console.log("-----------------");
 //fer-ho amb reduce
 let llistatUsuaris2 = dadesUsuaris.reduce((acumulador,element1)=>{
     let obj= ({ 'id': element1.id, 'name': element1.name, 'email': element1.email });
+    return obj;
     
 });
 console.log(llistatUsuaris2);
